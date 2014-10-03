@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'CubanoRegular';
+    src: url('../fonts/cubano-regular-webfont.eot');
+    src: url('../fonts/cubano-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/cubano-regular-webfont.woff') format('woff'),
+    url('../fonts/cubano-regular-webfont.ttf') format('truetype'),
+    url('../fonts/cubano-regular-webfont.svg#CubanoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    padding-bottom: 50px;
+    background-color: #333;
+    font-family: "CubanoRegular", "Patua One", serif;
+}
+
+a {
+    color: #fff;
+}
+a:hover {
+    text-decoration: none;
+    color: #eee;
+}
+
+h1 {
+    margin-top: 0;
+    font-family: "CubanoRegular", "Patua One", serif;
+    font-size: 72px;
+    text-transform: uppercase;
+    color: white;
+
+    cursor: default;
+}
+
+h3 {
+    padding-top: 20px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Front */
+
+#main {
+    padding: 50px 0;
+
+    background: rgb(232,78,15);
+    background: -moz-linear-gradient(-45deg, rgba(232,78,15,1) 0%, rgba(230,0,100,1) 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(232,78,15,1)), color-stop(100%,rgba(230,0,100,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(232,78,15,1) 0%,rgba(230,0,100,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(232,78,15,1) 0%,rgba(230,0,100,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(232,78,15,1) 0%,rgba(230,0,100,1) 100%);
+    background: linear-gradient(135deg, rgba(232,78,15,1) 0%,rgba(230,0,100,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e84e0f', endColorstr='#e60064',GradientType=1 );
+}
+
+.intro {
+    margin-top: 25px;
+    font-size: 24px;
+    color: #fff;
+
+    cursor: default;
+}
+
+.story {
+    margin-right: 15px;
+    margin-left: 15px;
+    padding-top: 50px;
+}
+
+form input {
+    font-family: Tahoma, Arial, sans-serif;
+}
+form label {
+    font-weight: normal;
+}
+.btn {
+    text-transform: uppercase;
+    border-color: #e5111d;
+    color: #fff;
+
+    background: rgb(255,140,93);
+    background: -moz-linear-gradient(top, rgba(255,140,93,1) 0%, rgba(232,78,15,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,140,93,1)), color-stop(100%,rgba(232,78,15,1)));
+    background: -webkit-linear-gradient(top, rgba(255,140,93,1) 0%,rgba(232,78,15,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,140,93,1) 0%,rgba(232,78,15,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,140,93,1) 0%,rgba(232,78,15,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,140,93,1) 0%,rgba(232,78,15,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8c5d', endColorstr='#e84e0f',GradientType=0 );
+}
+.btn:hover {
+    border-color: #e5111d;
+}
+.btn:hover, .btn:focus, .btn:active {
+    color: #fff;
+}
+
+.hearts {
+    margin-top: 50px;
+}
+
+.heartster {
+    opacity: 0.9;
+
+    color: #e52330;
+}
+
+.heartster:hover {
+    opacity: 1;
+
+    color: #e52330;
+}
+
+.insider {
+    display: inline-block;
+    position: relative;
+    padding: 20px;
+
+    animation-name: floating;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+    -webkit-animation-name: floating;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% { top: 0; }
+    50% { top: 20px; }
+    100% { top: 0; }
+}
+
+@-webkit-keyframes floating {
+    0% { top: 0; }
+    50% { top: 20px; }
+    100% { top: 0; }
+}
+
+/* View */
+
+#nav {
+    padding: 5px 0;
+
+    background: rgb(232,78,15);
+    background: -moz-linear-gradient(-45deg, rgba(232,78,15,1) 0%, rgba(230,0,100,1) 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(232,78,15,1)), color-stop(100%,rgba(230,0,100,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(232,78,15,1) 0%,rgba(230,0,100,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(232,78,15,1) 0%,rgba(230,0,100,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(232,78,15,1) 0%,rgba(230,0,100,1) 100%);
+    background: linear-gradient(135deg, rgba(232,78,15,1) 0%,rgba(230,0,100,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e84e0f', endColorstr='#e60064',GradientType=1 );
+}
+
+blockquote {
+    font-size: 48px;
+    line-height: 1.45;
+    position: relative;
+    color: #fff;
+    border-left: 0;
+}
+
+blockquote:before {
+    display: block;
+    content: "\201C";
+    font-size: 80px;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    color: #7a7a7a;
+}
+
+blockquote cite {
+    font-size: 24px;
+    display: block;
+    margin-top: 5px;
+    color: #fff;
+}
+
+blockquote cite:before {
+    content: "\2014 \2009";
+}
+
+.twitter-share-button {
+    margin-top: 30px;
+}
+
+#badge {
+    font-size: 200px;
+    color: #555;
+}

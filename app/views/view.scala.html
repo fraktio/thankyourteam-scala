@@ -1,0 +1,45 @@
+@(entries: List[Entry])
+
+@import helper._
+
+@main("Todo list") {
+    <div id="nav">
+        <div class="container">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="text-right">
+                    <a href="@routes.Application.entries" class="btn">
+                        Create new
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row story">
+            <div class="col-md-10 col-md-offset-1">
+                Saved message goes here....
+
+                <blockquote>
+                    @entries.head.message
+
+                    <cite>@entries.head.author, [date created goes here]</cite>
+
+                    <a class="twitter-share-button" data-size="large" href="https://twitter.com/share">
+                        Tweet
+                    </a>
+                </blockquote>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="badge" class="col-md-10 col-md-offset-1 text-center">
+                <i class="fa fa-{{ random(['heart', 'star', 'star-o', 'sun-o', 'trophy', 'heart-o', 'thumbs-o-up', 'smile-o']) }}"></i>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+    </script>
+}
