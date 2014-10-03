@@ -34,7 +34,7 @@ object Entry {
         val shortUrl = Random.alphanumeric.take(7).mkString
 
         DB.withConnection { implicit c =>
-            SQL("insert into entry (author, message, shortUrl, created) values ({author}, {message}, {shortUrl})").on(
+            SQL("insert into entry (author, message, shortUrl) values ({author}, {message}, {shortUrl})").on(
                 'author -> entry.author,
                 'message -> entry.message,
                 'shortUrl -> shortUrl
