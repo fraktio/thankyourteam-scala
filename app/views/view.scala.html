@@ -23,7 +23,7 @@
                 <blockquote>
                     @entries.head.message
 
-                    <cite>@entries.head.author, [date created goes here]</cite>
+                    <cite>@entries.head.author, @entries.head.created.format("MMM dd, yyyy")</cite>
 
                     <a class="twitter-share-button" data-size="large" href="https://twitter.com/share">
                         Tweet

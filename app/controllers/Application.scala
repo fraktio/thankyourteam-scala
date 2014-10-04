@@ -4,6 +4,7 @@ import play.api._
 import play.api.mvc._
 import play.api.data._
 import play.api.data.Forms._
+import java.util.Date
 
 import models.Entry
 
@@ -14,7 +15,8 @@ object Application extends Controller {
       "id" -> ignored(23L),
       "author" -> text,
       "message" -> text,
-      "shortUrl" -> ignored("")
+      "shortUrl" -> ignored(""),
+      "created" -> ignored(new Date())
     )(Entry.apply)(Entry.unapply)
   )
 
@@ -30,11 +32,6 @@ object Application extends Controller {
         Ok(views.html.view(Entry.findByShortUrl(identifier)))
       }
     )
-  }
-
-  def deleteEntry(shortUrl: String) = Action { implicit request =>
-    Entry.delete(shortUrl)
-    Redirect(routes.Application.entries)
   }
 
   def viewEntry(shortUrl: String) = Action { implicit request =>
