@@ -28,7 +28,7 @@ object Entry {
   def findByShortUrl(shortUrl: String) = DB.withConnection { implicit c =>
     SQL("select * from entry where shortUrl = {shortUrl}").on(
       'shortUrl -> shortUrl
-    ).as(entry *)
+    ).as(entry *).head
   }
 
   def create(entry: Entry) : String = {

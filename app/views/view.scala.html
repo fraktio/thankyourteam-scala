@@ -1,8 +1,8 @@
-@(entries: List[Entry])
+@(entry: Entry)
 
 @import helper._
 
-@main("#ThankYourTeam by " + entries.head.author) {
+@main("#ThankYourTeam by " + entry.author) {
     <div id="nav">
         <div class="container">
             <div class="col-md-10 col-md-offset-1">
@@ -19,9 +19,9 @@
         <div class="row story">
             <div class="col-md-10 col-md-offset-1">
                 <blockquote>
-                    @entries.head.message
+                    @entry.message
 
-                    <cite>@entries.head.author, @entries.head.created.format("MMM dd, yyyy")</cite>
+                    <cite>@entry.author, @entry.created.format("MMM dd, yyyy")</cite>
 
                     <a class="twitter-share-button" data-size="large" href="https://twitter.com/share">
                         Tweet
