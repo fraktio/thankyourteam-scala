@@ -5,7 +5,7 @@ import anorm.SqlParser._
 import play.api.db._
 import play.api.Play.current
 import scala.util.Random
-import java.util.Date;
+import java.util.Date
 
 case class Entry(id: Long, author: String, message: String, shortUrl: String, created: Date)
 
