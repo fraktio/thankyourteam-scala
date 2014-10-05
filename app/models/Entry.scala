@@ -25,7 +25,7 @@ object Entry {
     SQL("select * from entry").as(entry *)
   }
 
-  def findOneByShortUrl(shortUrl: String) = DB.withConnection { implicit c =>
+  def findOneByShortUrl(shortUrl: String): Entry = DB.withConnection { implicit c =>
     SQL("select * from entry where shortUrl = {shortUrl}").on(
       'shortUrl -> shortUrl
     ).as(entry *).head
