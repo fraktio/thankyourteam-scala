@@ -1,6 +1,7 @@
 @(entries: List[Entry], entryForm: Form[Entry])
 
 @import helper._
+@import scala.util.Random
 
 @main("#ThankYourTeam") {
     <div id="main">
@@ -76,8 +77,8 @@
 
                 @entries.map { entry =>
                     <a href="@routes.Application.viewEntry(entry.shortUrl)" class="heartster">
-                        <div class="insider" style="top: 5px; animation-duration: 10s; -webkit-animation-duration: 8s">
-                            <i class="fa fa-heart" style="font-size: 20px"></i>
+                        <div class="insider" style="top: @Random.nextInt(15)px; animation-duration: @(Random.nextInt(12) + 6)s; -webkit-animation-duration: @(Random.nextInt(12) + 6)s">
+                            <i class="fa fa-heart" style="font-size: @(Random.nextInt(29) + 14)px"></i>
                         </div>
                     </a>
                 }
