@@ -21,7 +21,10 @@ object Application extends Controller {
   )
 
   def entries = Action {
-    Ok(views.html.index(Entry.all(), entryForm))
+    Ok(views.html.index(
+      Entry.all(),
+      entryForm
+    ))
   }
 
   def newEntry = Action { implicit request =>
@@ -29,13 +32,17 @@ object Application extends Controller {
       errors => BadRequest(views.html.index(Entry.all(), errors)),
       entry => {
         val identifier = Entry.create(entry)
-        Ok(views.html.view(Entry.findOneByShortUrl(identifier)))
+        Ok(views.html.view(Entry.findOneByShortUrl(
+          identifier
+        )))
       }
     )
   }
 
   def viewEntry(shortUrl: String) = Action { implicit request =>
-    Ok(views.html.view(Entry.findOneByShortUrl(shortUrl)))
+    Ok(views.html.view(
+      Entry.findOneByShortUrl(shortUrl)
+    ))
   }
 
 }
