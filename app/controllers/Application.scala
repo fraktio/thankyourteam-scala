@@ -1,13 +1,19 @@
 package controllers
 
+import com.google.inject.Inject
+import com.google.inject.Singleton
 import play.api.mvc._
 import play.api.data._
 import play.api.data.Forms._
 import java.util.Date
 
+import com.google.inject.{Singleton, Inject}
+import scala.util.{Try, Success, Failure}
+
 import models.Entry
 
-object Application extends Controller {
+@Singleton
+class Application @Inject() extends Controller {
 
   val entryForm = Form(
     mapping(

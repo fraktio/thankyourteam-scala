@@ -2,6 +2,6 @@
 GET     /assets/*file       controllers.Assets.at(path="/public", file)
 
 # Entries
-GET     /                   controllers.Application.entries
-POST    /                   controllers.Application.newEntry
-GET     /:shortUrl          controllers.Application.viewEntry(shortUrl: String)
+GET     /                   @controllers.Application.entries
+POST    /                   @controllers.Application.newEntry
+GET     /:shortUrl          @controllers.Application.viewEntry(shortUrl: String)
