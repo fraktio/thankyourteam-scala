@@ -8,7 +8,9 @@
 ## Installation
 
 1. Clone the repository.
-2. `activator "run 9091"`
+2. Create database based on docs/createdatabase.sql script
+3. Create database user according to database settings in conf/application.conf
+4. `activator "run 9091"`
 
 ## Running
 
