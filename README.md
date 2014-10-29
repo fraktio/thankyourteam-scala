@@ -2,11 +2,14 @@
 
 ## Requirements
 
-- sbt
-- Play Framework 2.2.x
+- JDK 6 or later
+- Activator (https://typesafe.com/activator)
 
 ## Installation
 
 1. Clone the repository.
-1. Install Play Framework.
-1. `play "run 8080"`
+2. `activator "run 8080"`
+
+## Running
+
+Point your browser to http://localhost:8080

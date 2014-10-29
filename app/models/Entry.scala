@@ -1,11 +1,13 @@
 package models
 
-import anorm._
-import anorm.SqlParser._
-import play.api.db._
-import play.api.Play.current
-import scala.util.Random
 import java.util.Date
+
+import anorm.SqlParser._
+import anorm._
+import play.api.Play.current
+import play.api.db._
+
+import scala.util.Random
 
 case class Entry(id: Long, author: String, message: String, shortUrl: String, created: Date)
 
