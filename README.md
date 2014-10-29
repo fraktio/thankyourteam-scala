@@ -12,7 +12,7 @@
 
 ## Running
 
-Point your browser to http://localhost:8080
+Point your browser to http://localhost:9091
 
 ## Nginx proxy
 
