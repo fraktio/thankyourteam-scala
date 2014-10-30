@@ -4,6 +4,7 @@
 
 - JDK 6 or later
 - Activator (https://typesafe.com/activator)
+- PostgreSQL
 
 ## Installation
 
